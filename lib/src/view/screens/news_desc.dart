@@ -19,7 +19,7 @@ class NewsDesc extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 14.0),
+        padding: const EdgeInsets.symmetric(horizontal: 15.0),
         child: Column(
           children: [
             Text(
@@ -27,7 +27,7 @@ class NewsDesc extends StatelessWidget {
               style: const TextStyle(color: Colors.black, fontSize: 20),
             ),
             const SizedBox(
-              height: 20,
+              height: 25,
             ),
             Image(image: NetworkImage(newsImage)),
             const SizedBox(
