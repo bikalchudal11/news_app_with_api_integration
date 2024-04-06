@@ -1,15 +1,12 @@
 import 'dart:convert';
 import 'dart:core';
-
 import 'package:http/http.dart' as http;
-import 'package:news_app_api/src/model/news_model.dart';
-
-String newsApi =
-    "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=a2523562ad684b9995fdf8b667b6c869#";
+import 'package:news_app_api/src/core/api/api_endpoints.dart';
+import 'package:news_app_api/src/features/news/model/news_model.dart';
 
 class NewsRepository {
   static Future<NewsModel> getNews() async {
-    var url = Uri.parse(newsApi);
+    var url = Uri.parse(AppEndpoints.topHeadlines);
     try {
       var response = await http.get(url);
       var myData = jsonDecode(response.body);
